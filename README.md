@@ -83,7 +83,7 @@ The seed adds three `DEMO-` vehicles, three `DEMO-` drivers, and four shipments/
 
 ## Phase 2 notes
 
-This implementation is a functional educational prototype, not a production deployment. Change the development secrets, configure a production database and TLS, add frontend UI tests, migrations, and conduct a security review before any real deployment. The backend has eight passing API integration tests and Ruff checks; see `backend/requirements-dev.txt`. Repository hosting and branch history must describe the team's actual repository.
+This implementation is a functional educational prototype, not a production deployment. Change the development secrets, configure a production database and TLS, add frontend UI tests, migrations, and conduct a security review before any real deployment. The backend has eight passing API integration tests and Ruff checks; see `backend/requirements-dev.txt`. Source repository: [GitHub](https://github.com/ShreyasPSoori/logistics-fleet-system), branch `main`.
 
 Driver and customer-facing account workflows are not implemented in this prototype. The administrator account endpoint currently provisions administrator and manager roles only.
 

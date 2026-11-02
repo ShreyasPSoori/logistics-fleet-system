@@ -15,7 +15,7 @@ The current implementation demonstrates core workflows and validation for a cour
 
 ## Repository and setup
 
-The implementation is in the local workspace `E:\BEA`. No Git repository, branch history, or remote URL was configured when this report was prepared; the team should add the actual URL and branch names after creating or connecting its shared repository.
+The project is hosted in GitHub at [github.com/ShreyasPSoori/logistics-fleet-system](https://github.com/ShreyasPSoori/logistics-fleet-system). The Phase 2 implementation is on the `main` branch; commit `c241ef3` was pushed on Nov. 2, 2026.
 
 ### Technology stack
 
