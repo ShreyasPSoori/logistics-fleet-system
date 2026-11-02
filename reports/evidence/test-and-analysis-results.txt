@@ -1,0 +1,40 @@
+Enterprise Logistics and Fleet Operations Management System
+Verification run: 2026-11-02
+
+Environment
+  Python 3.14.7
+  pytest 9.2.0
+  Ruff 0.17.3
+  Vite 8.3.5
+  Backend database: isolated temporary SQLite file created by backend/tests/test_api.py
+
+Backend API integration tests
+  Command (from backend/): .\.venv\Scripts\python.exe -m pytest -q
+  Result: 8 passed, 0 failed, 3 warnings
+  Coverage: demo login; shipment/tracking creation; invalid vehicle capacity;
+            unknown shipment rejection; resource double-assignment rejection;
+            delivery state and resource release; maintenance completion;
+            role-based forbidden response.
+  Warnings: Starlette TestClient with httpx deprecation; FastAPI on_event startup
+            deprecation (reported by FastAPI and Starlette).
+
+Python syntax compilation
+  Command (from backend/): .\.venv\Scripts\python.exe -m compileall -q app tests
+  Result: passed
+
+Python static analysis
+  Command (from backend/): .\.venv\Scripts\ruff.exe check app tests
+  Result: All checks passed! (0 findings in final run)
+  Note: An earlier Ruff run reported style/import findings; those were corrected,
+        and the final scan above was clean.
+
+Frontend production build
+  Command (from frontend/): npm.cmd run build
+  Result: passed; Vite generated dist/index.html and bundled assets.
+  Warnings: Two MODULE_LEVEL_DIRECTIVE warnings from lucide-react package files
+            about the upstream "use client" directive.
+
+Scope limitations
+  Ruff covered Python backend and tests only. No frontend ESLint run, automated
+  frontend UI tests, dependency vulnerability scan, or security audit was run.
+  Passing these checks does not prove the absence of bugs or vulnerabilities.
